@@ -14,9 +14,9 @@ class Porsion {
     /**
      * 将字符串生成二维码图片
      * @param String $str [description]
-     * @param int $size [description]
+     * @param int|null $size [description]
      * @param String|null $logo [二维码LOGO图片，可以是本地图片，或者网络图片]
-     * @param int $ret_type [二维码返回类型 默认 0 返回图片流； 1 返回base64字符串； 2 写入文件路，必须提供$out_file ]
+     * @param int|null $ret_type [二维码返回类型 默认 0 返回图片流； 1 返回base64字符串； 2 写入文件路，必须提供$out_file ]
      * @param String|null $out_file [需要写入的二维码图片路径，必须提供完整的图片路径， 如  /var/www/static/qr/01.png ]
      * @return String [type]                [description]
      */

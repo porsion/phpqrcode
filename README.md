@@ -9,7 +9,7 @@ php生成带LOGO的二维码图片, 支持自定义LOGO，自定义输出目录�
 
 ~~~shell
 # 切换至项目根目录后执行以下命令安装本工具
-composer require "tekintian/phpqrcode"
+composer require "porsion/phpqrcode"
 ~~~
 
 
@@ -19,19 +19,19 @@ composer require "tekintian/phpqrcode"
 # autoload.php自动载入
 require_once __DIR__ . 'vendor/autoload.php';
 
-$str = "http://dev.tekin.cn";
+$str = "https://www.github.com/prosion";
 // 直接生成并输出二维码图片，默认大小
 // \tekintian\TekinQR::getQRImg($str);
 
 // 返回base64图片流
-$qr = \tekintian\TekinQR::getQRImg($str, 10, null, 1);
+$qr = \porsion\Porsion::getQRImg($str, 10, null, 1);
 echo $qr;
 
 // 生成带loog的二维码
-// $qr = \tekintian\TekinQR::getQRImg($str, 10, "http://tekin.cn/logo.png", 0);
+// $qr = \porsion\Porsion::getQRImg($str, 10, "http://xxx/logo.png", 0);
 
 // 生成二维码并写入到  /var/www/static/qr/123.png
-// $qr =\tekintian\TekinQR::getQRImg($str, 10, "http://tekin.cn/logo.png", 2, "/var/www/static/qr/123.png");
+// $qr =\Porsion\Porsion::getQRImg($str, 10, "http://xxx/logo.png", 2, "/var/www/static/qr/123.png");
 
 // getQRImg(String $str, int $size = 10, String $logo = null, int $ret_type = 0, String $out_file = null)
 ~~~
